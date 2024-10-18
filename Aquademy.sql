@@ -8,7 +8,9 @@ CREATE TABLE projects (
   Capacity DECIMAL(10, 2) NOT NULL,  -- Max energy input
   Type VARCHAR(100) NOT NULL,        -- Type of technology in use
   Status VARCHAR(50),                -- Completion status
-  CompletionDate DATE                -- Date of completion
+  CompletionDate DATE,                -- Date of completion
+  CustomerID INT,                    -- Foreign key referencing customers table
+  FOREIGN KEY (CustomerID) REFERENCES customers(CustomerID)
 	);
 
 CREATE TABLE developers (
@@ -51,6 +53,6 @@ CREATE TABLE customers (
   CustomerID INT PRIMARY KEY AUTO_INCREMENT,
   CustomerName VARCHAR(255) NOT NULL,
   Region VARCHAR(100) NOT NULL,			 -- Where a customer resides regionally
-  Date DATE NOT NULL,                    -- Date of data entry or reporting
+  CustomerDate DATE NOT NULL,            -- Date of data entry or reporting
   EnergyDemand DECIMAL(15, 2) NOT NULL   -- How much energy is being requested
 	);
