@@ -1,6 +1,6 @@
 # Capstone_1
 Data storytelling and SQL. The first capstone. 
-This capstone is considered week 5 of LTCA.
+This capstone is considered week 4 of LTCA.
 
 This project contains the database for a fictional company named "Aquademy" (Aqua Academy).
 Aquademy produces sustainable renewable energy products with a focus on hydropower in particular.
